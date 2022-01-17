@@ -1,0 +1,34 @@
+<div class="container">
+  <h2>Looking for something?</h2>
+  <div class="search">
+    <div class="searchbar">
+      <p class="bold subtitle">By Title</p>
+      <input (input)="filter()" [(ngModel)]="searchTerm" name="searchTerm"  />
+    </div>
+    
+    <div class="genres">
+      <p class="bold subtitle">By Genres</p>
+      <div class="genre">
+        <ng-container *ngFor="let genre of genres;let i = index">
+          <p
+            class="genreButton"
+            (click)="toggleGenre(genre)"
+            [ngClass]="{ active: activeGenres.includes(genre.id) }"
+          >
+            {{ genre.name }}
+          </p>
+        </ng-container>
+      </div>
+    </div>
+
+    <div class="sort">
+      <p class="bold subtitle">Sort by</p>
+      <select (change)="filter()"  [(ngModel)]="sortBy" name="sortBy">
+        <option>Unsorted</option>
+        <option>Name</option>
+        <option>Best Rating</option>
+        <option>Worst Rating</option>
+      </select>
+    </div>
+  </div>
+</div>

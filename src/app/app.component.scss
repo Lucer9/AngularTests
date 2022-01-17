@@ -1,0 +1,7 @@
+.content {
+  display: grid;
+  grid-template-columns: 350px auto;
+
+  height: calc(100vh - 75px);
+  box-sizing: border-box;
+}

@@ -1,0 +1,91 @@
+$activecolor: #1075f5;
+$activecolorTrans: #1073f569;
+
+.container {
+  padding: 20px;
+}
+
+.search {
+  // background-color: rgba(255, 255, 255, 0.025);
+  width: 100%;
+  min-height: 300px;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+.subtitle {
+  margin: 24px 0 12px 0;
+}
+
+input,
+select {
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background-color: rgba($color: #ffffff, $alpha: 0);
+  width: 90%;
+  padding: 8px 12px;
+  color: white;
+  background-image: url('data:image/svg+xml;utf8,  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="white"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>');
+  background-size: 1.3em;
+  background-position: 12px 50%;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+}
+
+input{
+  padding-left: 36px;
+}
+
+select{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;utf8,  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="white"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>');
+  background-position: 96% 50%;
+  
+  
+}
+
+
+$input-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.1);
+input:focus,
+textarea:focus,
+select:focus,
+// input:hover,
+// textarea:hover,
+// select:hover,
+.active-selection {
+  outline: none !important;
+  -webkit-box-shadow: $input-shadow;
+  -moz-box-shadow: $input-shadow;
+  box-shadow: $input-shadow;
+  border: 1px solid rgba(255, 255, 255, 1);
+
+  //   border: 1px solid #54C0E8;
+}
+
+.genre {
+  width: 100%;
+  height: 280px;
+  display: block;
+
+  .genreButton {
+    cursor: pointer;
+    font-size: 0.85em;
+    float: left;
+    display: inline-block;
+    padding: 8px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    margin: 4px;
+    transition: 0.3s ease all;
+
+    &:hover {
+      background-color: $activecolorTrans;
+      border: 1px solid $activecolor;
+    }
+
+    &.active {
+      background-color: $activecolor;
+      border: 1px solid $activecolor;
+    }
+  }
+}

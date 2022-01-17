@@ -1,0 +1,22 @@
+<div class="container">
+  <h2>
+    Latest Movies! 🎬 <span class="genres">({{ movies.length }}) </span>
+  </h2>
+  <div class="loader" *ngIf="loading"></div>
+  <div class="movies" >
+    <div class="movie" *ngFor="let movie of movies">
+      <img [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" />
+      <div class="info-container">
+        <div class="info">
+          <h2>{{ movie.original_title }}</h2>
+          <p class="genres small">
+            {{ movie.genre_ids[0] | genresId }} ({{ movie.vote_average }})
+          </p>
+          <p class="small">{{ movie.overview | truncate: [100, "..."] }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
