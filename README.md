@@ -2,9 +2,11 @@
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.5.  
-Used [TMDB API ](https://www.themoviedb.org) for the mock data, and even though the API comes with searching endpoints, it was all done in the frontend.
+Used [TMDB API ](https://www.themoviedb.org) for the mock data, and even though the API comes with searching endpoints, it was all done in the frontend. All of this was made in about 4 hours.
 All the CSS was handmade from a personal design    
 A demo can be found [here](https://peaceful-kowalevski-a35e88.netlify.app/)    
+
+
 
 **Note**
 >The demo has to get local data, because the API request is on HTTP while the site is on HTTPS
